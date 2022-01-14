@@ -6,9 +6,9 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Position pos = new Position(2, 2);
+		Board board = new Board(10, 10);
 		
-		System.out.println(pos);
+		System.out.println(board);
 	}
 
 }
