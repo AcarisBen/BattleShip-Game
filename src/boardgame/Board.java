@@ -9,7 +9,7 @@ public class Board {
 	public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Pieces[rows][columns];
+		pieces = new Piece[rows][columns];
 	}
 
 	public int getRows() {
@@ -28,5 +28,11 @@ public class Board {
 		this.columns = columns;
 	}
 
+	public Piece piece(int row, int column) { //Pede para ter um piece a partir de um int linha e coluna.
+		return pieces[row][column]; // adiciona a piece na matriz pieces
+	}
 	
+	public Piece piece(Position position) { // //Pede para ter um piece a partir de uma Position.
+		return pieces[position.getRow()][position.getColumn()]; // // adiciona a position na matriz pieces a partir da linha e da coluna.
+	}
 }

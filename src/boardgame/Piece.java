@@ -13,6 +13,6 @@ public class Piece {
 	protected Board getBoard() { // somente classes e subclasses acessam o getBoard
 		return board;
 	}
-	
+
 	
 }
