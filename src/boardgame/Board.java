@@ -5,11 +5,13 @@ public class Board {
 	private int rows; // Um tabuleiro tem linhas
 	private int columns; // Um tabuleiro tem colunas
 	private Piece[][] pieces; // As pieces ficam na matriz que vai ser a position delas.
-
-	public Board(int rows, int columns) {
+//	private int space;
+	
+	public Board(int rows, int columns ) {//int space
 		this.rows = rows;
 		this.columns = columns;
 		pieces = new Piece[rows][columns];
+		//this.space = space;
 	}
 
 	public int getRows() {
@@ -32,9 +34,18 @@ public class Board {
 		return pieces[row][column]; // adiciona a piece na matriz pieces
 	}
 	
-	public Piece piece(Position position) { // //Pede para ter um piece a partir de uma Position.
-		return pieces[position.getRow()][position.getColumn()]; // // adiciona a position na matriz pieces a partir da linha e da coluna.
+	public Piece piece(Position position) {//Pede para ter um piece a partir de uma Position.
+		return pieces[position.getRow()][position.getColumn()];// adiciona a position na matriz pieces a partir da linha e da coluna.
 	}
+	
+//	public Piece piece(int space) {
+//		for(int i=0; i<pieces.length;i++) {
+//			for (int j=0; j<pieces.length; j++) {
+//				(ShipPiece) pieces[space][space];
+//			}
+//		}
+//		return pieces;
+//	}
 	
 	public void placePiece(Piece piece, Position position) {//Coloca a peça no tabuleiro.
 		pieces[position.getRow()][position.getColumn()] = piece; //vai na matriz de peças do tableiro, na linha e na coluna position e atribuia a essa position a peça que vier como argumento.
