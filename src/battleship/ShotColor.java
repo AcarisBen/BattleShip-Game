@@ -1,6 +1,6 @@
 package battleship;
 
-public enum Color {
+public enum ShotColor {
 
 	BLUE,
 	RED,

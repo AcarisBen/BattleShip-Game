@@ -35,4 +35,9 @@ public class Board {
 	public Piece piece(Position position) { // //Pede para ter um piece a partir de uma Position.
 		return pieces[position.getRow()][position.getColumn()]; // // adiciona a position na matriz pieces a partir da linha e da coluna.
 	}
+	
+	public void placePiece(Piece piece, Position position) {//Coloca a peça no tabuleiro.
+		pieces[position.getRow()][position.getColumn()] = piece; //vai na matriz de peças do tableiro, na linha e na coluna position e atribuia a essa position a peça que vier como argumento.
+		piece.position = position;//informa que a peça não está mais na posição nula e sim, na posição Position da peça
+	}
 }
